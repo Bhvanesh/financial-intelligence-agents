@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install fastapi uvicorn sqlalchemy pydantic "python-jose[cryptography]" "passlib[bcrypt]" python-multipart python-dotenv pytest httpx pytest-asyncio redis secrets
+
+      - name: Run tests
+        env:
+          DATABASE_URL: "sqlite+pysqlite:///:memory:"
+          OPENAI_MODEL: "gpt-4o-mini"
+          OPENAI_API_KEY: "test-key"
+          LANGCHAIN_TRACING_V2: "false"
+          LANGCHAIN_API_KEY: ""
+          REDIS_HOST: "localhost"
+          REDIS_PORT: "6379"
+          REDIS_DB: "0"
+        run: pytest tests/ -v

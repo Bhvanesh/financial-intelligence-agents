@@ -1,0 +1,42 @@
+{
+    "route": "full_analysis",
+
+    "metrics": {
+        "company_name": "The Goldman Sachs Group, Inc.",
+        "fiscal_period": "Q3 2026",
+        "revenue_usd_millions": 18679.0,
+        "revenue_prior_quarter_usd_millions": 20338.0,
+        "revenue_prior_year_usd_millions": 15184.0,
+        "operating_income_usd_millions": null,
+        "net_income_usd_millions": 5294.0,
+        "net_income_prior_quarter_usd_millions": 6628.0,
+        "net_income_prior_year_usd_millions": 4098.0,
+        "diluted_eps_usd": 17.01,
+        "diluted_eps_prior_quarter_usd": 20.98,
+        "diluted_eps_prior_year_usd": 12.25,
+        "gross_margin_percent": null
+    },
+
+    "analysis": {
+        "net_margin_percent": 28.34,
+        "computed": {
+            "revenue_qoq_pct": -8.16,
+            "revenue_yoy_pct": 23.02,
+            "net_income_qoq_pct": -20.13,
+            "net_income_yoy_pct": 29.18,
+            "eps_qoq_pct": -18.92,
+            "eps_yoy_pct": 38.86,
+            "net_margin_pct": 28.34
+        }
+    },
+
+    "risks": {
+        "minimum_count": 2,
+        "all_verified": true,
+        "no_table_rows": true
+    },
+
+    "report": {
+        "verdict": "neutral"
+    }
+}
