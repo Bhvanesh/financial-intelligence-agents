@@ -20,7 +20,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install fastapi uvicorn sqlalchemy pydantic "python-jose[cryptography]" "passlib[bcrypt]" python-multipart python-dotenv pytest httpx pytest-asyncio redis secrets
+        run: pip install -r requirements.txt
 
       - name: Run tests
         env:
